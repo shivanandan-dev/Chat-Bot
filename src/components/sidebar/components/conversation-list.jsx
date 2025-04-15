@@ -15,7 +15,6 @@ export default function ConversationList({ conversation }) {
     const last30Days = subDays(today, 30);
 
     Object.values(conversation?.conversations).forEach((conversation) => {
-        console.log(conversation)
         const createdTime = new Date(conversation.createdTime);
 
         if (isToday(createdTime)) {
@@ -35,7 +34,6 @@ export default function ConversationList({ conversation }) {
         });
     });
 
-    console.log(categorizedConversations);
     return (
         <div className="overflow-y-scroll h-[calc(100vh-100px)] no-scrollbar mt-8">
             <div className="max-w-m">

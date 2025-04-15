@@ -9,14 +9,31 @@ export default function Sidebar() {
     async function getConversation() {
       const response = await fetch('http://localhost:4000/v1/conversations')
       const data = await response.json()
-      console.log(data)
       setConversations(data)
     }
     getConversation()
   }, [])
 
-  function handleClick() {
-    
+  async function handleClick() {
+    const response = await fetch("http://localhost:4000/v1/create-conversation",
+      {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify({ title: "New Conversation" })
+      })
+
+    const newConversation = await response.json()
+
+    setConversations(prevState => ({
+      ...prevState,
+      conversations: [
+        ...(prevState.conversations || []),
+        newConversation.conversation
+      ]
+    }))
   }
 
   return (
