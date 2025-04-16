@@ -1,7 +1,11 @@
-import React from 'react';
+import { Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import PromptExamples from '../components/prompt-example';
 
 export default function DefaultPage() {
+    const [newMessage, setNewMessage] = useState("")
+    const navigate = useNavigate()
     const promptExamples = {
         0: {
             id: "Examples",
@@ -32,9 +36,38 @@ export default function DefaultPage() {
         }
     };
 
+    async function handleSubmit(event) {
+        event.preventDefault()
+
+        if (!newMessage) return
+
+        const response = await fetch("http://localhost:4000/v1/create-conversation", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify({ title: "New Conversation" })
+        })
+
+        navigate.push(response.conversation.id)
+    }
+
     return (
-        <div className="flex justify-evenly w-full bg-stone-950 h-[90%] items-center">
-            {Object.values(promptExamples).map(data => <PromptExamples key={data.id} symbol={data.symbol} exampleCategory={data.id} examples={data.promptQuestions} />)}
+        <div>
+            <div className="flex justify-evenly w-full bg-stone-950 h-[90%] items-center">
+                {Object.values(promptExamples).map(data => <PromptExamples key={data.id} symbol={data.symbol} exampleCategory={data.id} examples={data.promptQuestions} />)}
+            </div>
+            <form onSubmit={handleSubmit} className='flex justify-center items-center w-full bg-stone-800 gap-4 focus-within:ring-1 border-0 rounded-full text-sm focus-within:ring-stone-600'>
+                <input
+                    className="w-[90%] h-9 bg-stone-800 focus:outline-none"
+                    type="text"
+                    value={newMessage}
+                    onChange={(e) => setNewMessage(e.target.value)}
+                    placeholder="Type your message..."
+                />
+                <button type="submit"><Send size={20} /></button>
+            </form>
         </div>
     )
 }
