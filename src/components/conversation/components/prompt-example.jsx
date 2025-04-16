@@ -8,7 +8,6 @@ export default function PromptExamples({ symbol, exampleCategory, examples }) {
         TriangleAlert: <TriangleAlert />
     }
 
-    console.log(examples)
     return (
         <div className='flex flex-col items-center'>
             {symbols[symbol]}

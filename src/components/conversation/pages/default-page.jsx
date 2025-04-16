@@ -1,5 +1,5 @@
 import React from 'react';
-import PromptExamples from './promt-example';
+import PromptExamples from '../components/prompt-example';
 
 export default function DefaultPage() {
     const promptExamples = {
