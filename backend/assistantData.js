@@ -41,8 +41,8 @@ export const dummyMessagesData = {
     { id: "m2", type: "assistant", message: "Hello! How can I help you?", createdTime: '2025-01-21T09:16:42.765Z' }
   ],
   "2": [
-    { id: "m3", type: "user", message: "How are you?", createdTime: '2025-02-15T09:20:42.765Z' },
-    { id: "m4", type: "assistant", message: "I'm good, thanks!", createdTime: '2025-02-15T09:21:42.765Z' },
+    { id: "m1", type: "user", message: "How are you?", createdTime: '2025-02-15T09:20:42.765Z' },
+    { id: "m2", type: "assistant", message: "I'm good, thanks!", createdTime: '2025-02-15T09:21:42.765Z' },
     { id: "m3", type: "user", message: "What is a semiconductor?", createdTime: '2025-02-15T09:20:48.765Z' },
     { id: "m4", type: "assistant", message: "A semiconductor is a material that is between the conductor and insulator in ability to conduct electrical current. In many cases their conducting properties may be altered in useful ways by introducing impurities ('doping') into the crystal structure.", createdTime: '2025-02-15T09:21:52.765Z' }
   ],
