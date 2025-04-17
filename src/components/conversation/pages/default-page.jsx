@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router';
 import PromptExamples from '../components/prompt-example';
 
 export default function DefaultPage() {
-    const [newMessage, setNewMessage] = useState("")
-    const navigate = useNavigate()
+    const [newMessage, setNewMessage] = useState("");
+    const navigate = useNavigate();
     const promptExamples = {
         0: {
             id: "Examples",
@@ -37,20 +37,50 @@ export default function DefaultPage() {
     };
 
     async function handleSubmit(event) {
-        event.preventDefault()
+        event.preventDefault();
 
-        if (!newMessage) return
+        if (!newMessage) return;
 
-        const response = await fetch("http://localhost:4000/v1/create-conversation", {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({ title: "New Conversation" })
-        })
+        try {
+            const conversationResponse = await fetch("http://localhost:4000/v1/create-conversation", {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify({ title: "New Conversation" })
+            });
 
-        navigate.push(response.conversation.id)
+            const conversationData = await conversationResponse.json();
+
+            if (!conversationData.success) {
+                console.error("Failed to create conversation");
+                return;
+            }
+
+            const conversationId = conversationData.conversation.id;
+
+            const messageResponse = await fetch("http://localhost:4000/v1/create-message", {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify({
+                    userQuery: newMessage,
+                    conversationId
+                })
+            });
+
+            if (!messageResponse.ok) {
+                console.error("Failed to create message");
+                return;
+            }
+
+            navigate(conversationId);
+        } catch (error) {
+            console.error("An error occurred:", error);
+        }
     }
 
     return (
@@ -69,5 +99,5 @@ export default function DefaultPage() {
                 <button type="submit"><Send size={20} /></button>
             </form>
         </div>
-    )
+    );
 }
