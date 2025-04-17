@@ -96,7 +96,7 @@ export default function DefaultPage() {
                     onChange={(e) => setNewMessage(e.target.value)}
                     placeholder="Type your message..."
                 />
-                <button type="submit"><Send size={20} /></button>
+                <button disabled={!newMessage.trim()} className={`${!newMessage.trim() ? 'text-stone-700' : 'text-stone-200'}`} type="submit"><Send size={20} /></button>
             </form>
         </div>
     );
