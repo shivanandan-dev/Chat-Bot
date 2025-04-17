@@ -1,7 +1,7 @@
 import { Plus } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-import ConversationList from './components/conversation-list'
+import ConversationList from './components/ConversationList'
 
 export default function Sidebar() {
   const [conversations, setConversations] = useState({})

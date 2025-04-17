@@ -1,7 +1,7 @@
 import { Send } from 'lucide-react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
-import PromptExamples from '../components/prompt-example';
+import PromptExamples from '../components/PromptExamples';
 
 export default function DefaultPage() {
     const [newMessage, setNewMessage] = useState("");

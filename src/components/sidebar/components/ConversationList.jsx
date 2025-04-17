@@ -1,6 +1,6 @@
 import { isToday, subDays } from "date-fns";
 import React from 'react';
-import CategoryList from "./categories-list";
+import CategoryList from "./CategoryList";
 
 export default function ConversationList({ conversation }) {
     const categorizedConversations = {
