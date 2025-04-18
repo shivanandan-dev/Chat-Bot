@@ -1,7 +1,7 @@
 import { Bot, CircleUser, Send } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router';
-import useGetConversation from '../../../hooks/useGetConversation';
+import useGetConversation from '../../../hooks/useGetMessages';
 import useSendMessage from '../../../hooks/useSendMessage';
 
 export default function ChatPage() {

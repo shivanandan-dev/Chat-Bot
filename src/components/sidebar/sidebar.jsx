@@ -1,30 +1,13 @@
 "use client"
 
 import { Plus } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { Link } from "react-router"
+import { useConversation } from "../../context/ConversationContext"
 import ConversationList from "./components/ConversationList"
 
 export default function Sidebar() {
-  const [conversations, setConversations] = useState({})
-  const [refreshTrigger, setRefreshTrigger] = useState(0)
-
-  const refreshConversations = () => {
-    setRefreshTrigger((prev) => prev + 1)
-  }
-
-  useEffect(() => {
-    async function getConversation() {
-      try {
-        const response = await fetch("http://localhost:4000/v1/conversations")
-        const data = await response.json()
-        setConversations(data)
-      } catch (error) {
-        console.error("Failed to fetch conversations:", error)
-      }
-    }
-    getConversation()
-  }, [refreshTrigger])
+  const { conversations } = useConversation()
 
   return (
     <div className="bg-stone-900 w-[15%] h-screen overflow-hidden flex justify-center">
@@ -35,7 +18,7 @@ export default function Sidebar() {
           </button>
         </Link>
         {conversations?.conversations ? (
-          <ConversationList conversation={conversations} refreshConversations={refreshConversations} />
+          <ConversationList />
         ) : (
           <p className="mt-5 text-sm text-center text-stone-400">
             History is unavailable. No recent chats to display. Start a new conversation to see it listed here.

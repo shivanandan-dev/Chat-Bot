@@ -26,6 +26,7 @@ export default function useDeleteConversation() {
                 throw new Error(data.message || "Failed to delete conversation");
             }
 
+            console.log("deleteted");
             return data;
         } catch (err) {
             setError(err.message || "An error occurred");

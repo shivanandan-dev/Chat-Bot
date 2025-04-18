@@ -1,7 +1,9 @@
 import { isToday, subDays } from "date-fns"
+import { useEffect } from "react"
+import { useConversation } from "../../../context/ConversationContext"
 import CategoryList from "./CategoryList"
 
-export default function ConversationList({ conversation, refreshConversations }) {
+export default function ConversationList({ }) {
     const categorizedConversations = {
         today: [],
         last7Days: [],
@@ -9,11 +11,19 @@ export default function ConversationList({ conversation, refreshConversations })
         before30Days: [],
     }
 
+    const { conversations: conversation, getConversations } = useConversation()
+
     const today = new Date()
     const last7Days = subDays(today, 7)
     const last30Days = subDays(today, 30)
 
-    Object.values(conversation?.conversations).forEach((conversation) => {
+    useEffect(() => {
+        getConversations()
+    }, [])
+
+    const allConversations = conversation?.conversations || {}
+
+    Object.values(allConversations).forEach((conversation) => {
         const createdTime = new Date(conversation.createdTime)
 
         if (isToday(createdTime)) {
@@ -39,22 +49,18 @@ export default function ConversationList({ conversation, refreshConversations })
                 <CategoryList
                     title="Today"
                     conversations={categorizedConversations.today}
-                    refreshConversations={refreshConversations}
                 />
                 <CategoryList
                     title="Last 7 Days"
                     conversations={categorizedConversations.last7Days}
-                    refreshConversations={refreshConversations}
                 />
                 <CategoryList
                     title="Last 30 Days"
                     conversations={categorizedConversations.last30Days}
-                    refreshConversations={refreshConversations}
                 />
                 <CategoryList
                     title="Before 30 Days"
                     conversations={categorizedConversations.before30Days}
-                    refreshConversations={refreshConversations}
                 />
             </div>
         </div>

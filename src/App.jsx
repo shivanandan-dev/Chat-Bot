@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import ChatPage from './components/conversation/pages/ChatPage'
 import DefaultPage from './components/conversation/pages/DefaultPage'
+import { ConversationsProvider } from './context/ConversationContext'
 import RootLayout from './pages/Root'
 
 const router = createBrowserRouter([
@@ -16,5 +17,9 @@ const router = createBrowserRouter([
 ])
 
 export default function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ConversationsProvider>
+      <RouterProvider router={router} />
+    </ConversationsProvider>
+  )
 }

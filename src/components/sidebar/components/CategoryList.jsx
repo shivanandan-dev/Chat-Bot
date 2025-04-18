@@ -3,14 +3,12 @@
 import { MessageSquareText, Pencil, Send, Trash2, X } from "lucide-react"
 import { useState } from "react"
 import { useNavigate } from "react-router"
-import useDeleteConversation from "../../../hooks/useDeleteConversation"
-import useUpdateConversation from "../../../hooks/useUpdateConversation"
+import { useConversation } from "../../../context/ConversationContext"
 
-const CategoryList = ({ title, conversations, refreshConversations }) => {
+const CategoryList = ({ title, conversations }) => {
     const [editMode, setEditMode] = useState(null)
     const [editedTitle, setEditedTitle] = useState("")
-    const { updateConversation, isUpdating, error: updateError } = useUpdateConversation()
-    const { deleteConversation, isDeleting, error: deleteError } = useDeleteConversation()
+    const { deleteConversation, updateConversation, loading, error } = useConversation()
     const navigate = useNavigate()
 
     if (!conversations.length) return null
@@ -31,7 +29,6 @@ const CategoryList = ({ title, conversations, refreshConversations }) => {
         e.stopPropagation()
         try {
             await updateConversation(id, editedTitle)
-            refreshConversations()
         } catch (err) {
             console.error(err.message)
         }
@@ -43,7 +40,6 @@ const CategoryList = ({ title, conversations, refreshConversations }) => {
         e.stopPropagation()
         try {
             await deleteConversation(id)
-            refreshConversations()
         } catch (err) {
             console.error(err.message)
         }
