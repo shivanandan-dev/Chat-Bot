@@ -1,4 +1,3 @@
-
 export default function useSendMessage(conversationId, setMessages, setNewMessage) {
     async function handleSubmit(event, newMessage) {
         event.preventDefault();
@@ -58,15 +57,19 @@ export default function useSendMessage(conversationId, setMessages, setNewMessag
                         const parsed = JSON.parse(jsonString);
 
                         if (parsed.state === 'response') {
-                            assistantContent += parsed.content || '';
+                            for (const char of parsed.content || '') {
+                                assistantContent += char;
 
-                            setMessages((prev) =>
-                                prev.map((msg) =>
-                                    msg.id === tempAssistantId
-                                        ? { ...msg, message: assistantContent }
-                                        : msg
-                                )
-                            );
+                                await new Promise((resolve) => setTimeout(resolve, 10));
+
+                                setMessages((prev) =>
+                                    prev.map((msg) =>
+                                        msg.id === tempAssistantId
+                                            ? { ...msg, message: assistantContent }
+                                            : msg
+                                    )
+                                );
+                            }
                         } else if (parsed.state === 'complete') {
                             return;
                         }
