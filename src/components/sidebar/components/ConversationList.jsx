@@ -1,5 +1,4 @@
 import { isToday, subDays } from "date-fns"
-import { useEffect } from "react"
 import { useConversation } from "../../../context/ConversationContext"
 import CategoryList from "./CategoryList"
 
@@ -11,15 +10,12 @@ export default function ConversationList({ }) {
         before30Days: [],
     }
 
-    const { conversations: conversation, getConversations } = useConversation()
+    const { conversations: conversation } = useConversation()
 
     const today = new Date()
     const last7Days = subDays(today, 7)
     const last30Days = subDays(today, 30)
 
-    useEffect(() => {
-        getConversations()
-    }, [])
 
     const allConversations = conversation?.conversations || {}
 
