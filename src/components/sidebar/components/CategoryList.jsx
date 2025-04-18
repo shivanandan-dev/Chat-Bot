@@ -1,64 +1,66 @@
-import { MessageSquareText, Pencil, Send, Trash2, X } from "lucide-react";
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import useDeleteConversation from "../../../hooks/useDeleteConversation";
-import useUpdateConversation from "../../../hooks/useUpdateConversation";
+"use client"
 
-const CategoryList = ({ title, conversations }) => {
-    const [editMode, setEditMode] = useState(null);
-    const [editedTitle, setEditedTitle] = useState("");
-    const { updateConversation, isUpdating, error: updateError } = useUpdateConversation();
-    const { deleteConversation, isDeleting, error: deleteError } = useDeleteConversation();
-    const navigate = useNavigate();
+import { MessageSquareText, Pencil, Send, Trash2, X } from "lucide-react"
+import { useState } from "react"
+import { useNavigate } from "react-router"
+import useDeleteConversation from "../../../hooks/useDeleteConversation"
+import useUpdateConversation from "../../../hooks/useUpdateConversation"
 
-    if (!conversations.length) return null;
+const CategoryList = ({ title, conversations, refreshConversations }) => {
+    const [editMode, setEditMode] = useState(null)
+    const [editedTitle, setEditedTitle] = useState("")
+    const { updateConversation, isUpdating, error: updateError } = useUpdateConversation()
+    const { deleteConversation, isDeleting, error: deleteError } = useDeleteConversation()
+    const navigate = useNavigate()
+
+    if (!conversations.length) return null
 
     const handleEditClick = (e, conversation) => {
-        e.stopPropagation();
-        setEditMode(conversation.id);
-        setEditedTitle(conversation.title);
-    };
+        e.stopPropagation()
+        setEditMode(conversation.id)
+        setEditedTitle(conversation.title)
+    }
 
     const handleCancelEdit = (e) => {
-        e.stopPropagation();
-        setEditMode(null);
-        setEditedTitle("");
-    };
+        e.stopPropagation()
+        setEditMode(null)
+        setEditedTitle("")
+    }
 
     const handleSaveEdit = async (e, id) => {
-        e.stopPropagation();
+        e.stopPropagation()
         try {
-            await updateConversation(id, editedTitle);
-            alert("Conversation updated successfully!");
+            await updateConversation(id, editedTitle)
+            refreshConversations()
         } catch (err) {
-            console.error(err.message);
+            console.error(err.message)
         }
-        setEditMode(null);
-        setEditedTitle("");
-    };
+        setEditMode(null)
+        setEditedTitle("")
+    }
 
     const handleDeleteClick = async (e, id) => {
-        e.stopPropagation();
+        e.stopPropagation()
         try {
-            await deleteConversation(id);
-            alert("Conversation deleted successfully!");
+            await deleteConversation(id)
+            refreshConversations()
         } catch (err) {
-            console.error(err.message);
+            console.error(err.message)
         }
-    };
+    }
 
     const handleNavigate = (id) => {
         if (!editMode) {
-            navigate(id);
+            navigate(id)
         }
-    };
+    }
 
     return (
         <div className="mb-7">
             <p className="text-sm mb-4 text-stone-400">{title}</p>
             {conversations.map((value) => {
-                const isEditing = editMode === value.id;
-                const trimmedTitle = value.title.substring(0, 17);
+                const isEditing = editMode === value.id
+                const trimmedTitle = value.title.substring(0, 17)
 
                 return (
                     <button
@@ -74,6 +76,7 @@ const CategoryList = ({ title, conversations }) => {
                                     value={editedTitle}
                                     onChange={(e) => setEditedTitle(e.target.value)}
                                     className="bg-stone-700 text-stone-300 rounded p-1 text-sm w-full"
+                                    onClick={(e) => e.stopPropagation()}
                                 />
                             ) : (
                                 <>
@@ -91,11 +94,7 @@ const CategoryList = ({ title, conversations }) => {
                                         className="cursor-pointer hover:text-blue-500"
                                         onClick={(e) => handleSaveEdit(e, value.id)}
                                     />
-                                    <X
-                                        size={15}
-                                        className="cursor-pointer hover:text-red-500"
-                                        onClick={handleCancelEdit}
-                                    />
+                                    <X size={15} className="cursor-pointer hover:text-red-500" onClick={handleCancelEdit} />
                                 </>
                             ) : (
                                 <>
@@ -113,10 +112,10 @@ const CategoryList = ({ title, conversations }) => {
                             )}
                         </div>
                     </button>
-                );
+                )
             })}
         </div>
-    );
-};
+    )
+}
 
-export default CategoryList;
+export default CategoryList
