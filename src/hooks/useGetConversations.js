@@ -9,7 +9,7 @@ export default function useGetConversations() {
         setGettingConversation(true)
         setError(false)
         try {
-          const response = await fetch("http://localhost:4000/v1/conversations1")
+          const response = await fetch("http://localhost:4000/v1/conversations")
           const data = await response.json()
           setConversations(data)
         } catch (error) {
