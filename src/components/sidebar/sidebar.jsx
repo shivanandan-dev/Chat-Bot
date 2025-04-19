@@ -5,10 +5,15 @@ import { Link } from "react-router"
 import { useConversation } from "../../context/ConversationContext"
 import SkeletonGroup from "../ui/SkeletonGroup"
 import ConversationList from "./components/ConversationList"
+import SidebarError from "./components/SidebarError"
 
 export default function Sidebar() {
-  const { conversations, loading } = useConversation()
+  const { conversations, loading, error, getConversations } = useConversation()
   const skeletonCounts = [5, 5, 5, 5]
+
+  const handleRetry = () => {
+    getConversations()
+  }
 
   return (
     <div className="bg-stone-900 w-[300px] h-screen overflow-hidden flex justify-center">
@@ -18,16 +23,17 @@ export default function Sidebar() {
             <Plus /> New Chat
           </button>
         </Link>
-        {loading ?
+        {error ? (
+          <SidebarError error={error} onRetry={handleRetry} />
+        ) : loading ? (
           <SkeletonGroup groupCounts={skeletonCounts} />
-          : conversations?.conversations ? (
-            <ConversationList />
-          )
-            : (
-              <p className="mt-5 text-sm text-center text-stone-400">
-                History is unavailable. No recent chats to display. Start a new conversation to see it listed here.
-              </p>
-            )}
+        ) : conversations?.conversations ? (
+          <ConversationList />
+        ) : (
+          <p className="mt-5 text-sm text-center text-stone-400">
+            History is unavailable. No recent chats to display. Start a new conversation to see it listed here.
+          </p>
+        )}
       </div>
     </div>
   )

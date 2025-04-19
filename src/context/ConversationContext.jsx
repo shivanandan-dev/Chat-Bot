@@ -8,10 +8,10 @@ const ConversationContext = createContext()
 export function ConversationsProvider({ children }) {
     const { updateConversation, isUpdating, error: updateError } = useUpdateConversation()
     const { deleteConversation, isDeleting, error: deleteError } = useDeleteConversation()
-    const { conversations, getConversations, isGettingConversation } = useGetConversations()
+    const { conversations, getConversations, isGettingConversation, error: isGettingConversationsError } = useGetConversations()
 
     const loading = isDeleting || isUpdating || isGettingConversation
-    const error = deleteError || updateError
+    const error = deleteError || updateError || isGettingConversationsError
 
     const updateConversationMutation = (id, title) => {
         updateConversation(id, title).then(() => {

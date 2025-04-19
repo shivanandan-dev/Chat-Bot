@@ -7,12 +7,13 @@ export default function useGetConversations() {
 
     async function getConversations() {
         setGettingConversation(true)
+        setError(false)
         try {
-          const response = await fetch("http://localhost:4000/v1/conversations")
+          const response = await fetch("http://localhost:4000/v1/conversations1")
           const data = await response.json()
           setConversations(data)
         } catch (error) {
-          setError("Failed to fetch error")
+          setError("Error: Failed to fetch conversation data.")
         } finally {
             setGettingConversation(false)
         }
