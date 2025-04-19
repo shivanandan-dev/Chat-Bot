@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router';
 
 export default function Conversation() {
-    return (
-        <div className='h-screen w-full bg-slate-700'>
-            <div className=''>
-                <h1 className='flex gap-2 text-3xl'>ChatBot</h1>
-            </div>
-        </div>
-    )
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  return (
+    <div className="h-screen w-full flex justify-center bg-stone-950">
+      <Outlet />
+    </div>
+  );
 }
