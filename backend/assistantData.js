@@ -1,193 +1,528 @@
 export const dummyChatListData = {
   conversations: [
-    { id: "1", title: "Simple conversation", createdTime: '2025-01-21T09:10:42.765Z', updatedTime: '2025-01-21T09:10:42.765Z' },
-    { id: "2", title: "Semiconductor insight", createdTime: '2025-02-15T09:10:42.765Z', updatedTime: '2025-02-15T09:10:42.765Z' },
-    { id: "3", title: "General greetings", createdTime: '2025-03-10T09:10:42.765Z', updatedTime: '2025-03-10T09:10:42.765Z' },
-    { id: "4", title: "Weather enquirey", createdTime: '2025-04-05T09:10:42.765Z', updatedTime: '2025-04-05T09:10:42.765Z' },
-    { id: "5", title: "greetings!", createdTime: '2025-05-01T09:10:42.765Z', updatedTime: '2025-05-01T09:10:42.765Z' },
-    { id: "6", title: "Chat with Emma", createdTime: '2025-06-25T09:10:42.765Z', updatedTime: '2025-06-25T09:10:42.765Z' },
-    { id: "7", title: "Chat with Frank", createdTime: '2025-07-20T09:10:42.765Z', updatedTime: '2025-07-20T09:10:42.765Z' },
-    { id: "8", title: "Chat with Grace", createdTime: '2025-08-15T09:10:42.765Z', updatedTime: '2025-08-15T09:10:42.765Z' },
-    { id: "9", title: "Chat with Henry", createdTime: '2025-09-10T09:10:42.765Z', updatedTime: '2025-09-10T09:10:42.765Z' },
-    { id: "10", title: "Chat with Irene", createdTime: '2025-10-05T09:10:42.765Z', updatedTime: '2025-10-05T09:10:42.765Z' },
-    { id: "13", title: "Chat with Leo", createdTime: '2024-01-21T09:10:42.765Z', updatedTime: '2024-01-21T09:10:42.765Z' },
-    { id: "14", title: "Chat with Mia", createdTime: '2024-02-15T09:10:42.765Z', updatedTime: '2024-02-15T09:10:42.765Z' },
-    { id: "15", title: "Chat with Noah", createdTime: '2024-03-10T09:10:42.765Z', updatedTime: '2024-03-10T09:10:42.765Z' },
-    { id: "16", title: "Chat with Olivia", createdTime: '2024-04-05T09:10:42.765Z', updatedTime: '2024-04-05T09:10:42.765Z' },
-    { id: "17", title: "Chat with Paul", createdTime: '2024-05-01T09:10:42.765Z', updatedTime: '2024-05-01T09:10:42.765Z' },
-    { id: "18", title: "Chat with Quinn", createdTime: '2024-06-25T09:10:42.765Z', updatedTime: '2024-06-25T09:10:42.765Z' },
-    { id: "19", title: "Chat with Rachel", createdTime: '2024-07-20T09:10:42.765Z', updatedTime: '2024-07-20T09:10:42.765Z' },
-    { id: "20", title: "Chat with Steve", createdTime: '2024-08-15T09:10:42.765Z', updatedTime: '2024-08-15T09:10:42.765Z' },
-    { id: "21", title: "Chat with Tom", createdTime: '2024-09-10T09:10:42.765Z', updatedTime: '2024-09-10T09:10:42.765Z' },
-    { id: "22", title: "Chat with Uma", createdTime: '2024-10-05T09:10:42.765Z', updatedTime: '2024-10-05T09:10:42.765Z' },
-    { id: "23", title: "Chat with Victor", createdTime: '2024-11-01T09:10:42.765Z', updatedTime: '2024-11-01T09:10:42.765Z' },
-    { id: "24", title: "Chat with Wendy", createdTime: '2024-12-25T09:10:42.765Z', updatedTime: '2024-12-25T09:10:42.765Z' },
-    { id: "25", title: "Chat with Xavier", createdTime: '2023-01-21T09:10:42.765Z', updatedTime: '2024-01-21T09:10:42.765Z' },
-    { id: "26", title: "Chat with Yara", createdTime: '2023-02-15T09:10:42.765Z', updatedTime: '2024-02-15T09:10:42.765Z' },
-    { id: "27", title: "Chat with Zach", createdTime: '2023-03-10T09:10:42.765Z', updatedTime: '2024-03-10T09:10:42.765Z' },
-    { id: "28", title: "Chat with Amy", createdTime: '2023-04-05T09:10:42.765Z', updatedTime: '2024-04-05T09:10:42.765Z' },
-    { id: "29", title: "Chat with Brian", createdTime: '2023-05-01T09:10:42.765Z', updatedTime: '2024-05-01T09:10:42.765Z' },
-    { id: "30", title: "Chat with Cindy", createdTime: '2023-06-25T09:10:42.765Z', updatedTime: '2024-06-25T09:10:42.765Z' },
-    { id: "11", title: "Chat with Jack", createdTime: '2023-11-01T09:10:42.765Z', updatedTime: '2024-11-01T09:10:42.765Z' },
-    { id: "12", title: "Chat with Karen", createdTime: '2023-12-25T09:10:42.765Z', updatedTime: '2024-12-25T09:10:42.765Z' }
+    {
+      id: '1',
+      title: 'Simple conversation',
+      createdTime: '2025-01-21T09:10:42.765Z',
+      updatedTime: '2025-01-21T09:10:42.765Z'
+    },
+    {
+      id: '2',
+      title: 'Semiconductor insight',
+      createdTime: '2025-02-15T09:10:42.765Z',
+      updatedTime: '2025-02-15T09:10:42.765Z'
+    },
+    {
+      id: '3',
+      title: 'General greetings',
+      createdTime: '2025-03-10T09:10:42.765Z',
+      updatedTime: '2025-03-10T09:10:42.765Z'
+    },
+    {
+      id: '4',
+      title: 'Weather enquirey',
+      createdTime: '2025-04-05T09:10:42.765Z',
+      updatedTime: '2025-04-05T09:10:42.765Z'
+    },
+    {
+      id: '5',
+      title: 'greetings!',
+      createdTime: '2025-05-01T09:10:42.765Z',
+      updatedTime: '2025-05-01T09:10:42.765Z'
+    },
+    {
+      id: '6',
+      title: 'Chat with Emma',
+      createdTime: '2025-06-25T09:10:42.765Z',
+      updatedTime: '2025-06-25T09:10:42.765Z'
+    },
+    {
+      id: '7',
+      title: 'Chat with Frank',
+      createdTime: '2025-07-20T09:10:42.765Z',
+      updatedTime: '2025-07-20T09:10:42.765Z'
+    },
+    {
+      id: '8',
+      title: 'Chat with Grace',
+      createdTime: '2025-08-15T09:10:42.765Z',
+      updatedTime: '2025-08-15T09:10:42.765Z'
+    },
+    {
+      id: '9',
+      title: 'Chat with Henry',
+      createdTime: '2025-09-10T09:10:42.765Z',
+      updatedTime: '2025-09-10T09:10:42.765Z'
+    },
+    {
+      id: '10',
+      title: 'Chat with Irene',
+      createdTime: '2025-10-05T09:10:42.765Z',
+      updatedTime: '2025-10-05T09:10:42.765Z'
+    },
+    {
+      id: '13',
+      title: 'Chat with Leo',
+      createdTime: '2024-01-21T09:10:42.765Z',
+      updatedTime: '2024-01-21T09:10:42.765Z'
+    },
+    {
+      id: '14',
+      title: 'Chat with Mia',
+      createdTime: '2024-02-15T09:10:42.765Z',
+      updatedTime: '2024-02-15T09:10:42.765Z'
+    },
+    {
+      id: '15',
+      title: 'Chat with Noah',
+      createdTime: '2024-03-10T09:10:42.765Z',
+      updatedTime: '2024-03-10T09:10:42.765Z'
+    },
+    {
+      id: '16',
+      title: 'Chat with Olivia',
+      createdTime: '2024-04-05T09:10:42.765Z',
+      updatedTime: '2024-04-05T09:10:42.765Z'
+    },
+    {
+      id: '17',
+      title: 'Chat with Paul',
+      createdTime: '2024-05-01T09:10:42.765Z',
+      updatedTime: '2024-05-01T09:10:42.765Z'
+    },
+    {
+      id: '18',
+      title: 'Chat with Quinn',
+      createdTime: '2024-06-25T09:10:42.765Z',
+      updatedTime: '2024-06-25T09:10:42.765Z'
+    },
+    {
+      id: '19',
+      title: 'Chat with Rachel',
+      createdTime: '2024-07-20T09:10:42.765Z',
+      updatedTime: '2024-07-20T09:10:42.765Z'
+    },
+    {
+      id: '20',
+      title: 'Chat with Steve',
+      createdTime: '2024-08-15T09:10:42.765Z',
+      updatedTime: '2024-08-15T09:10:42.765Z'
+    },
+    {
+      id: '21',
+      title: 'Chat with Tom',
+      createdTime: '2024-09-10T09:10:42.765Z',
+      updatedTime: '2024-09-10T09:10:42.765Z'
+    },
+    {
+      id: '22',
+      title: 'Chat with Uma',
+      createdTime: '2024-10-05T09:10:42.765Z',
+      updatedTime: '2024-10-05T09:10:42.765Z'
+    },
+    {
+      id: '23',
+      title: 'Chat with Victor',
+      createdTime: '2024-11-01T09:10:42.765Z',
+      updatedTime: '2024-11-01T09:10:42.765Z'
+    },
+    {
+      id: '24',
+      title: 'Chat with Wendy',
+      createdTime: '2024-12-25T09:10:42.765Z',
+      updatedTime: '2024-12-25T09:10:42.765Z'
+    },
+    {
+      id: '25',
+      title: 'Chat with Xavier',
+      createdTime: '2023-01-21T09:10:42.765Z',
+      updatedTime: '2024-01-21T09:10:42.765Z'
+    },
+    {
+      id: '26',
+      title: 'Chat with Yara',
+      createdTime: '2023-02-15T09:10:42.765Z',
+      updatedTime: '2024-02-15T09:10:42.765Z'
+    },
+    {
+      id: '27',
+      title: 'Chat with Zach',
+      createdTime: '2023-03-10T09:10:42.765Z',
+      updatedTime: '2024-03-10T09:10:42.765Z'
+    },
+    {
+      id: '28',
+      title: 'Chat with Amy',
+      createdTime: '2023-04-05T09:10:42.765Z',
+      updatedTime: '2024-04-05T09:10:42.765Z'
+    },
+    {
+      id: '29',
+      title: 'Chat with Brian',
+      createdTime: '2023-05-01T09:10:42.765Z',
+      updatedTime: '2024-05-01T09:10:42.765Z'
+    },
+    {
+      id: '30',
+      title: 'Chat with Cindy',
+      createdTime: '2023-06-25T09:10:42.765Z',
+      updatedTime: '2024-06-25T09:10:42.765Z'
+    },
+    {
+      id: '11',
+      title: 'Chat with Jack',
+      createdTime: '2023-11-01T09:10:42.765Z',
+      updatedTime: '2024-11-01T09:10:42.765Z'
+    },
+    {
+      id: '12',
+      title: 'Chat with Karen',
+      createdTime: '2023-12-25T09:10:42.765Z',
+      updatedTime: '2024-12-25T09:10:42.765Z'
+    }
   ],
   page: 1,
-  totalPages: 3,
+  totalPages: 3
 };
 
 export const dummyMessagesData = {
-  "1": [
-    { id: "m1", type: "user", message: "Hi there!", createdTime: '2025-01-21T09:15:42.765Z' },
-    { id: "m2", type: "assistant", message: "Hello! How can I help you?", createdTime: '2025-01-21T09:16:42.765Z' }
+  1: [
+    { id: 'm1', type: 'user', message: 'Hi there!', createdTime: '2025-01-21T09:15:42.765Z' },
+    {
+      id: 'm2',
+      type: 'assistant',
+      message: 'Hello! How can I help you?',
+      createdTime: '2025-01-21T09:16:42.765Z'
+    }
   ],
-  "2": [
-    { id: "m1", type: "user", message: "How are you?", createdTime: '2025-02-15T09:20:42.765Z' },
-    { id: "m2", type: "assistant", message: "I'm good, thanks!", createdTime: '2025-02-15T09:21:42.765Z' },
-    { id: "m3", type: "user", message: "What is a semiconductor?", createdTime: '2025-02-15T09:20:48.765Z' },
-    { id: "m4", type: "assistant", message: "A semiconductor is a material that is between the conductor and insulator in ability to conduct electrical current. In many cases their conducting properties may be altered in useful ways by introducing impurities ('doping') into the crystal structure.", createdTime: '2025-02-15T09:21:52.765Z' }
+  2: [
+    { id: 'm1', type: 'user', message: 'How are you?', createdTime: '2025-02-15T09:20:42.765Z' },
+    {
+      id: 'm2',
+      type: 'assistant',
+      message: "I'm good, thanks!",
+      createdTime: '2025-02-15T09:21:42.765Z'
+    },
+    {
+      id: 'm3',
+      type: 'user',
+      message: 'What is a semiconductor?',
+      createdTime: '2025-02-15T09:20:48.765Z'
+    },
+    {
+      id: 'm4',
+      type: 'assistant',
+      message:
+        "A semiconductor is a material that is between the conductor and insulator in ability to conduct electrical current. In many cases their conducting properties may be altered in useful ways by introducing impurities ('doping') into the crystal structure.",
+      createdTime: '2025-02-15T09:21:52.765Z'
+    }
   ],
-  "3": [
-    { id: "m5", type: "user", message: "What's up?", createdTime: '2025-03-10T09:25:42.765Z' },
-    { id: "m6", type: "assistant", message: "Great, how can I help you with?", createdTime: '2025-03-10T09:26:42.765Z' }
+  3: [
+    { id: 'm5', type: 'user', message: "What's up?", createdTime: '2025-03-10T09:25:42.765Z' },
+    {
+      id: 'm6',
+      type: 'assistant',
+      message: 'Great, how can I help you with?',
+      createdTime: '2025-03-10T09:26:42.765Z'
+    }
   ],
-  "4": [
-    { id: "m7", type: "user", message: "Hey!", createdTime: '2025-04-05T09:30:42.765Z' },
-    { id: "m8", type: "assistant", message: "Hi! Let me know how I can help you with", createdTime: '2025-04-05T09:31:42.765Z' },
-    { id: "m7.1", type: "user", message: "What is the weather like?", createdTime: '2025-04-05T09:30:49.765Z' },
-    { id: "m8.1", type: "assistant", message: "It is 32°C out there, you can expect an high of 34°C and low of 27°C today.", createdTime: '2025-04-05T09:31:53.765Z' }
+  4: [
+    { id: 'm7', type: 'user', message: 'Hey!', createdTime: '2025-04-05T09:30:42.765Z' },
+    {
+      id: 'm8',
+      type: 'assistant',
+      message: 'Hi! Let me know how I can help you with',
+      createdTime: '2025-04-05T09:31:42.765Z'
+    },
+    {
+      id: 'm7.1',
+      type: 'user',
+      message: 'What is the weather like?',
+      createdTime: '2025-04-05T09:30:49.765Z'
+    },
+    {
+      id: 'm8.1',
+      type: 'assistant',
+      message: 'It is 32°C out there, you can expect an high of 34°C and low of 27°C today.',
+      createdTime: '2025-04-05T09:31:53.765Z'
+    }
   ],
-  "5": [
-    { id: "m9", type: "user", message: "Good morning!", createdTime: '2025-05-01T09:35:42.765Z' },
-    { id: "m10", type: "assistant", message: "Good morning! How may I be of an assistant to you?", createdTime: '2025-05-01T09:36:42.765Z' }
+  5: [
+    { id: 'm9', type: 'user', message: 'Good morning!', createdTime: '2025-05-01T09:35:42.765Z' },
+    {
+      id: 'm10',
+      type: 'assistant',
+      message: 'Good morning! How may I be of an assistant to you?',
+      createdTime: '2025-05-01T09:36:42.765Z'
+    }
   ],
-  "6": [
-    { id: "m1", type: "user", message: "Hi there!", createdTime: '2025-01-21T09:15:42.765Z' },
-    { id: "m2", type: "assistant", message: "Hello! How can I help you?", createdTime: '2025-01-21T09:16:42.765Z' }
+  6: [
+    { id: 'm1', type: 'user', message: 'Hi there!', createdTime: '2025-01-21T09:15:42.765Z' },
+    {
+      id: 'm2',
+      type: 'assistant',
+      message: 'Hello! How can I help you?',
+      createdTime: '2025-01-21T09:16:42.765Z'
+    }
   ],
-  "7": [
-    { id: "m3", type: "user", message: "How are you?", createdTime: '2025-02-15T09:20:42.765Z' },
-    { id: "m4", type: "assistant", message: "I'm good, thanks!", createdTime: '2025-02-15T09:21:42.765Z' }
+  7: [
+    { id: 'm3', type: 'user', message: 'How are you?', createdTime: '2025-02-15T09:20:42.765Z' },
+    {
+      id: 'm4',
+      type: 'assistant',
+      message: "I'm good, thanks!",
+      createdTime: '2025-02-15T09:21:42.765Z'
+    }
   ],
-  "8": [
-    { id: "m5", type: "user", message: "What's up?", createdTime: '2025-03-10T09:25:42.765Z' },
-    { id: "m6", type: "assistant", message: "Great, how can I help you with?", createdTime: '2025-03-10T09:26:42.765Z' }
+  8: [
+    { id: 'm5', type: 'user', message: "What's up?", createdTime: '2025-03-10T09:25:42.765Z' },
+    {
+      id: 'm6',
+      type: 'assistant',
+      message: 'Great, how can I help you with?',
+      createdTime: '2025-03-10T09:26:42.765Z'
+    }
   ],
-  "9": [
-    { id: "m7", type: "user", message: "Hey!", createdTime: '2025-04-05T09:30:42.765Z' },
-    { id: "m8", type: "assistant", message: "Hi! Let me know how I can help you with", createdTime: '2025-04-05T09:31:42.765Z' }
+  9: [
+    { id: 'm7', type: 'user', message: 'Hey!', createdTime: '2025-04-05T09:30:42.765Z' },
+    {
+      id: 'm8',
+      type: 'assistant',
+      message: 'Hi! Let me know how I can help you with',
+      createdTime: '2025-04-05T09:31:42.765Z'
+    }
   ],
-  "10": [
-    { id: "m1", type: "user", message: "Hello, how are you?", createdTime: '2025-05-01T09:00:00.000Z' },
-    { id: "m2", type: "assistant", message: "I'm doing great! How can I assist you today? Is there something specific you need help with, or would you like me to provide general assistance? Feel free to ask anything!", createdTime: '2025-05-01T09:01:00.000Z' },
-    { id: "m3", type: "user", message: "Can you help me with my account settings? I'm not sure how to find the section where I can make changes.", createdTime: '2025-05-01T09:03:00.000Z' },
-    { id: "m4", type: "assistant", message: "Of course! What specific settings are you looking to update? If you can tell me exactly what you're trying to do, I can guide you step-by-step to ensure you can make the changes quickly and easily.", createdTime: '2025-05-01T09:05:00.000Z' },
-    { id: "m5", type: "user", message: "I want to change my email address to a new one because I no longer have access to my old email. Can you guide me?", createdTime: '2025-05-01T09:06:00.000Z' },
-    { id: "m6", type: "assistant", message: "Got it. You can change your email address by navigating to your profile settings. Once there, you'll find an option labeled 'Email Preferences' or 'Contact Information'. Click on that, and you'll be able to update your email address. Make sure to verify the new email as well.", createdTime: '2025-05-01T09:08:00.000Z' },
-    { id: "m7", type: "user", message: "Thank you! Can I also change my password there? I'd like to update it to something more secure while I'm managing my account settings.", createdTime: '2025-05-01T09:10:00.000Z' },
-    { id: "m8", type: "assistant", message: "Yes, you can change your password in the same section under 'Security Settings'. Look for an option called 'Change Password'. You'll need to enter your current password for verification and then provide the new one. Make sure your new password is strong—at least 12 characters with a mix of uppercase, lowercase, numbers, and symbols.", createdTime: '2025-05-01T09:12:00.000Z' },
-    { id: "m9", type: "user", message: "Good morning! I hope you're having a great day. I have a few questions for you if you have the time.", createdTime: '2025-05-01T09:35:42.765Z' },
-    { id: "m10", type: "assistant", message: "Good morning! Thank you for asking. I'm here to help with anything you need. Feel free to ask your questions, and I'll do my best to provide you with accurate and helpful answers.", createdTime: '2025-05-01T09:36:42.765Z' },
-    { id: "m11", type: "user", message: "Can you recommend a good programming book? I've been trying to improve my coding skills, and I want to read something that will help me write better, cleaner, and more efficient code.", createdTime: '2025-05-01T09:40:00.000Z' },
-    { id: "m12", type: "assistant", message: "Sure! One of the best programming books I can recommend is 'Clean Code' by Robert C. Martin. It's a fantastic resource for learning how to write clean, maintainable, and efficient code. The book also covers real-world examples and practical tips for improving your software development skills.", createdTime: '2025-05-01T09:42:00.000Z' },
-    { id: "m13", type: "user", message: "How do I debug a JavaScript application? I'm working on a project, and I keep running into issues that are difficult to diagnose. Any advice?", createdTime: '2025-05-01T09:45:00.000Z' },
-    { id: "m14", type: "assistant", message: "You can use browser developer tools or a debugger like VS Code to debug your JavaScript application. Start by opening the developer tools in your browser (usually accessible via F12 or right-click > Inspect). Navigate to the 'Console' or 'Debugger' tab to identify errors. Would you like detailed instructions on using these tools effectively?", createdTime: '2025-05-01T09:47:00.000Z' },
-    { id: "m15", type: "user", message: "Yes, please send me detailed instructions. I'd especially like to know how to use breakpoints and step through my code to understand where things are going wrong.", createdTime: '2025-05-01T09:50:00.000Z' },
-    { id: "m16", type: "assistant", message: "Absolutely! To use breakpoints in your code, open the browser's developer tools and navigate to the 'Sources' tab. Find the JavaScript file you're working on, and click on the line number where you want to set a breakpoint. Once the code execution pauses at the breakpoint, you can step through the code line by line using the navigation buttons. This will help you understand how your variables and logic are behaving at each step.", createdTime: '2025-05-01T09:52:00.000Z' },
-    { id: "m17", type: "user", message: "That's really helpful! Are there any common mistakes or best practices I should keep in mind while debugging JavaScript applications?", createdTime: '2025-05-01T09:55:00.000Z' },
-    { id: "m18", type: "assistant", message: "When debugging JavaScript, always keep your console clear by removing unnecessary logs. Use meaningful comments and organize your code into smaller functions for easier debugging. Avoid global variables as they can lead to unexpected issues. Most importantly, test your code incrementally to catch errors early. Let me know if you'd like more tips!", createdTime: '2025-05-01T09:57:00.000Z' },
-    { id: "m19", type: "user", message: "I'll definitely keep those in mind. By the way, do you have any advice for staying productive when working on large projects? I sometimes find myself losing focus or getting overwhelmed.", createdTime: '2025-05-01T10:00:00.000Z' },
-    { id: "m20", type: "assistant", message: "Staying productive on large projects can be challenging, but here are some tips: Break your project into smaller, manageable tasks. Use a project management tool like Trello or Notion to track your progress. Set realistic goals for each day, and take regular breaks to avoid burnout. Most importantly, celebrate small wins to keep yourself motivated.", createdTime: '2025-05-01T10:02:00.000Z' }
+  10: [
+    {
+      id: 'm1',
+      type: 'user',
+      message: 'Hello, how are you?',
+      createdTime: '2025-05-01T09:00:00.000Z'
+    },
+    {
+      id: 'm2',
+      type: 'assistant',
+      message:
+        "I'm doing great! How can I assist you today? Is there something specific you need help with, or would you like me to provide general assistance? Feel free to ask anything!",
+      createdTime: '2025-05-01T09:01:00.000Z'
+    },
+    {
+      id: 'm3',
+      type: 'user',
+      message:
+        "Can you help me with my account settings? I'm not sure how to find the section where I can make changes.",
+      createdTime: '2025-05-01T09:03:00.000Z'
+    },
+    {
+      id: 'm4',
+      type: 'assistant',
+      message:
+        "Of course! What specific settings are you looking to update? If you can tell me exactly what you're trying to do, I can guide you step-by-step to ensure you can make the changes quickly and easily.",
+      createdTime: '2025-05-01T09:05:00.000Z'
+    },
+    {
+      id: 'm5',
+      type: 'user',
+      message:
+        'I want to change my email address to a new one because I no longer have access to my old email. Can you guide me?',
+      createdTime: '2025-05-01T09:06:00.000Z'
+    },
+    {
+      id: 'm6',
+      type: 'assistant',
+      message:
+        "Got it. You can change your email address by navigating to your profile settings. Once there, you'll find an option labeled 'Email Preferences' or 'Contact Information'. Click on that, and you'll be able to update your email address. Make sure to verify the new email as well.",
+      createdTime: '2025-05-01T09:08:00.000Z'
+    },
+    {
+      id: 'm7',
+      type: 'user',
+      message:
+        "Thank you! Can I also change my password there? I'd like to update it to something more secure while I'm managing my account settings.",
+      createdTime: '2025-05-01T09:10:00.000Z'
+    },
+    {
+      id: 'm8',
+      type: 'assistant',
+      message:
+        "Yes, you can change your password in the same section under 'Security Settings'. Look for an option called 'Change Password'. You'll need to enter your current password for verification and then provide the new one. Make sure your new password is strong—at least 12 characters with a mix of uppercase, lowercase, numbers, and symbols.",
+      createdTime: '2025-05-01T09:12:00.000Z'
+    },
+    {
+      id: 'm9',
+      type: 'user',
+      message:
+        "Good morning! I hope you're having a great day. I have a few questions for you if you have the time.",
+      createdTime: '2025-05-01T09:35:42.765Z'
+    },
+    {
+      id: 'm10',
+      type: 'assistant',
+      message:
+        "Good morning! Thank you for asking. I'm here to help with anything you need. Feel free to ask your questions, and I'll do my best to provide you with accurate and helpful answers.",
+      createdTime: '2025-05-01T09:36:42.765Z'
+    },
+    {
+      id: 'm11',
+      type: 'user',
+      message:
+        "Can you recommend a good programming book? I've been trying to improve my coding skills, and I want to read something that will help me write better, cleaner, and more efficient code.",
+      createdTime: '2025-05-01T09:40:00.000Z'
+    },
+    {
+      id: 'm12',
+      type: 'assistant',
+      message:
+        "Sure! One of the best programming books I can recommend is 'Clean Code' by Robert C. Martin. It's a fantastic resource for learning how to write clean, maintainable, and efficient code. The book also covers real-world examples and practical tips for improving your software development skills.",
+      createdTime: '2025-05-01T09:42:00.000Z'
+    },
+    {
+      id: 'm13',
+      type: 'user',
+      message:
+        "How do I debug a JavaScript application? I'm working on a project, and I keep running into issues that are difficult to diagnose. Any advice?",
+      createdTime: '2025-05-01T09:45:00.000Z'
+    },
+    {
+      id: 'm14',
+      type: 'assistant',
+      message:
+        "You can use browser developer tools or a debugger like VS Code to debug your JavaScript application. Start by opening the developer tools in your browser (usually accessible via F12 or right-click > Inspect). Navigate to the 'Console' or 'Debugger' tab to identify errors. Would you like detailed instructions on using these tools effectively?",
+      createdTime: '2025-05-01T09:47:00.000Z'
+    },
+    {
+      id: 'm15',
+      type: 'user',
+      message:
+        "Yes, please send me detailed instructions. I'd especially like to know how to use breakpoints and step through my code to understand where things are going wrong.",
+      createdTime: '2025-05-01T09:50:00.000Z'
+    },
+    {
+      id: 'm16',
+      type: 'assistant',
+      message:
+        "Absolutely! To use breakpoints in your code, open the browser's developer tools and navigate to the 'Sources' tab. Find the JavaScript file you're working on, and click on the line number where you want to set a breakpoint. Once the code execution pauses at the breakpoint, you can step through the code line by line using the navigation buttons. This will help you understand how your variables and logic are behaving at each step.",
+      createdTime: '2025-05-01T09:52:00.000Z'
+    },
+    {
+      id: 'm17',
+      type: 'user',
+      message:
+        "That's really helpful! Are there any common mistakes or best practices I should keep in mind while debugging JavaScript applications?",
+      createdTime: '2025-05-01T09:55:00.000Z'
+    },
+    {
+      id: 'm18',
+      type: 'assistant',
+      message:
+        "When debugging JavaScript, always keep your console clear by removing unnecessary logs. Use meaningful comments and organize your code into smaller functions for easier debugging. Avoid global variables as they can lead to unexpected issues. Most importantly, test your code incrementally to catch errors early. Let me know if you'd like more tips!",
+      createdTime: '2025-05-01T09:57:00.000Z'
+    },
+    {
+      id: 'm19',
+      type: 'user',
+      message:
+        "I'll definitely keep those in mind. By the way, do you have any advice for staying productive when working on large projects? I sometimes find myself losing focus or getting overwhelmed.",
+      createdTime: '2025-05-01T10:00:00.000Z'
+    },
+    {
+      id: 'm20',
+      type: 'assistant',
+      message:
+        'Staying productive on large projects can be challenging, but here are some tips: Break your project into smaller, manageable tasks. Use a project management tool like Trello or Notion to track your progress. Set realistic goals for each day, and take regular breaks to avoid burnout. Most importantly, celebrate small wins to keep yourself motivated.',
+      createdTime: '2025-05-01T10:02:00.000Z'
+    }
   ]
 };
 
 export const assistantMessages = [
-    { "content": "", "type": "TEXT", "properties": null },
-    { "content": "Hello", "type": "TEXT", "properties": null },
-    { "content": "!", "type": "TEXT", "properties": null },
-    { "content": " 👋", "type": "TEXT", "properties": null },
-    { "content": " I", "type": "TEXT", "properties": null },
-    { "content": " hope", "type": "TEXT", "properties": null },
-    { "content": " you're", "type": "TEXT", "properties": null },
-    { "content": " doing", "type": "TEXT", "properties": null },
-    { "content": " well", "type": "TEXT", "properties": null },
-    { "content": " today", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": " I", "type": "TEXT", "properties": null },
-    { "content": " wanted", "type": "TEXT", "properties": null },
-    { "content": " to", "type": "TEXT", "properties": null },
-    { "content": " reach", "type": "TEXT", "properties": null },
-    { "content": " out", "type": "TEXT", "properties": null },
-    { "content": " and", "type": "TEXT", "properties": null },
-    { "content": " share", "type": "TEXT", "properties": null },
-    { "content": " some", "type": "TEXT", "properties": null },
-    { "content": " updates", "type": "TEXT", "properties": null },
-    { "content": " regarding", "type": "TEXT", "properties": null },
-    { "content": " the", "type": "TEXT", "properties": null },
-    { "content": " project", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": "", "type": "TEXT", "properties": null },
-    { "content": "First", "type": "TEXT", "properties": null },
-    { "content": ",", "type": "TEXT", "properties": null },
-    { "content": " I", "type": "TEXT", "properties": null },
-    { "content": " want", "type": "TEXT", "properties": null },
-    { "content": " to", "type": "TEXT", "properties": null },
-    { "content": " thank", "type": "TEXT", "properties": null },
-    { "content": " everyone", "type": "TEXT", "properties": null },
-    { "content": " for", "type": "TEXT", "properties": null },
-    { "content": " their", "type": "TEXT", "properties": null },
-    { "content": " hard", "type": "TEXT", "properties": null },
-    { "content": " work", "type": "TEXT", "properties": null },
-    { "content": " and", "type": "TEXT", "properties": null },
-    { "content": " dedication", "type": "TEXT", "properties": null },
-    { "content": " over", "type": "TEXT", "properties": null },
-    { "content": " the", "type": "TEXT", "properties": null },
-    { "content": " past", "type": "TEXT", "properties": null },
-    { "content": " few", "type": "TEXT", "properties": null },
-    { "content": " weeks", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": " Your", "type": "TEXT", "properties": null },
-    { "content": " efforts", "type": "TEXT", "properties": null },
-    { "content": " have", "type": "TEXT", "properties": null },
-    { "content": " truly", "type": "TEXT", "properties": null },
-    { "content": " made", "type": "TEXT", "properties": null },
-    { "content": " a", "type": "TEXT", "properties": null },
-    { "content": " difference", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": "", "type": "TEXT", "properties": null },
-    { "content": "Moving", "type": "TEXT", "properties": null },
-    { "content": " forward", "type": "TEXT", "properties": null },
-    { "content": ",", "type": "TEXT", "properties": null },
-    { "content": " we", "type": "TEXT", "properties": null },
-    { "content": " have", "type": "TEXT", "properties": null },
-    { "content": " some", "type": "TEXT", "properties": null },
-    { "content": " exciting", "type": "TEXT", "properties": null },
-    { "content": " milestones", "type": "TEXT", "properties": null },
-    { "content": " to", "type": "TEXT", "properties": null },
-    { "content": " achieve", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": " For", "type": "TEXT", "properties": null },
-    { "content": " example", "type": "TEXT", "properties": null },
-    { "content": ",", "type": "TEXT", "properties": null },
-    { "content": " the", "type": "TEXT", "properties": null },
-    { "content": " new", "type": "TEXT", "properties": null },
-    { "content": " feature", "type": "TEXT", "properties": null },
-    { "content": " rollout", "type": "TEXT", "properties": null },
-    { "content": " is", "type": "TEXT", "properties": null },
-    { "content": " scheduled", "type": "TEXT", "properties": null },
-    { "content": " for", "type": "TEXT", "properties": null },
-    { "content": " next", "type": "TEXT", "properties": null },
-    { "content": " week", "type": "TEXT", "properties": null },
-    { "content": ",", "type": "TEXT", "properties": null },
-    { "content": " and", "type": "TEXT", "properties": null },
-    { "content": " I", "type": "TEXT", "properties": null },
-    { "content": " am", "type": "TEXT", "properties": null },
-    { "content": " confident", "type": "TEXT", "properties": null },
-    { "content": " that", "type": "TEXT", "properties": null },
-    { "content": " it", "type": "TEXT", "properties": null },
-    { "content": " will", "type": "TEXT", "properties": null },
-    { "content": " be", "type": "TEXT", "properties": null },
-    { "content": " a", "type": "TEXT", "properties": null },
-    { "content": " success", "type": "TEXT", "properties": null },
-    { "content": ".", "type": "TEXT", "properties": null },
-    { "content": "", "type": "TEXT", "properties": null },
+  { content: '', type: 'TEXT', properties: null },
+  { content: 'Hello', type: 'TEXT', properties: null },
+  { content: '!', type: 'TEXT', properties: null },
+  { content: ' 👋', type: 'TEXT', properties: null },
+  { content: ' I', type: 'TEXT', properties: null },
+  { content: ' hope', type: 'TEXT', properties: null },
+  { content: " you're", type: 'TEXT', properties: null },
+  { content: ' doing', type: 'TEXT', properties: null },
+  { content: ' well', type: 'TEXT', properties: null },
+  { content: ' today', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: ' I', type: 'TEXT', properties: null },
+  { content: ' wanted', type: 'TEXT', properties: null },
+  { content: ' to', type: 'TEXT', properties: null },
+  { content: ' reach', type: 'TEXT', properties: null },
+  { content: ' out', type: 'TEXT', properties: null },
+  { content: ' and', type: 'TEXT', properties: null },
+  { content: ' share', type: 'TEXT', properties: null },
+  { content: ' some', type: 'TEXT', properties: null },
+  { content: ' updates', type: 'TEXT', properties: null },
+  { content: ' regarding', type: 'TEXT', properties: null },
+  { content: ' the', type: 'TEXT', properties: null },
+  { content: ' project', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: '', type: 'TEXT', properties: null },
+  { content: 'First', type: 'TEXT', properties: null },
+  { content: ',', type: 'TEXT', properties: null },
+  { content: ' I', type: 'TEXT', properties: null },
+  { content: ' want', type: 'TEXT', properties: null },
+  { content: ' to', type: 'TEXT', properties: null },
+  { content: ' thank', type: 'TEXT', properties: null },
+  { content: ' everyone', type: 'TEXT', properties: null },
+  { content: ' for', type: 'TEXT', properties: null },
+  { content: ' their', type: 'TEXT', properties: null },
+  { content: ' hard', type: 'TEXT', properties: null },
+  { content: ' work', type: 'TEXT', properties: null },
+  { content: ' and', type: 'TEXT', properties: null },
+  { content: ' dedication', type: 'TEXT', properties: null },
+  { content: ' over', type: 'TEXT', properties: null },
+  { content: ' the', type: 'TEXT', properties: null },
+  { content: ' past', type: 'TEXT', properties: null },
+  { content: ' few', type: 'TEXT', properties: null },
+  { content: ' weeks', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: ' Your', type: 'TEXT', properties: null },
+  { content: ' efforts', type: 'TEXT', properties: null },
+  { content: ' have', type: 'TEXT', properties: null },
+  { content: ' truly', type: 'TEXT', properties: null },
+  { content: ' made', type: 'TEXT', properties: null },
+  { content: ' a', type: 'TEXT', properties: null },
+  { content: ' difference', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: '', type: 'TEXT', properties: null },
+  { content: 'Moving', type: 'TEXT', properties: null },
+  { content: ' forward', type: 'TEXT', properties: null },
+  { content: ',', type: 'TEXT', properties: null },
+  { content: ' we', type: 'TEXT', properties: null },
+  { content: ' have', type: 'TEXT', properties: null },
+  { content: ' some', type: 'TEXT', properties: null },
+  { content: ' exciting', type: 'TEXT', properties: null },
+  { content: ' milestones', type: 'TEXT', properties: null },
+  { content: ' to', type: 'TEXT', properties: null },
+  { content: ' achieve', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: ' For', type: 'TEXT', properties: null },
+  { content: ' example', type: 'TEXT', properties: null },
+  { content: ',', type: 'TEXT', properties: null },
+  { content: ' the', type: 'TEXT', properties: null },
+  { content: ' new', type: 'TEXT', properties: null },
+  { content: ' feature', type: 'TEXT', properties: null },
+  { content: ' rollout', type: 'TEXT', properties: null },
+  { content: ' is', type: 'TEXT', properties: null },
+  { content: ' scheduled', type: 'TEXT', properties: null },
+  { content: ' for', type: 'TEXT', properties: null },
+  { content: ' next', type: 'TEXT', properties: null },
+  { content: ' week', type: 'TEXT', properties: null },
+  { content: ',', type: 'TEXT', properties: null },
+  { content: ' and', type: 'TEXT', properties: null },
+  { content: ' I', type: 'TEXT', properties: null },
+  { content: ' am', type: 'TEXT', properties: null },
+  { content: ' confident', type: 'TEXT', properties: null },
+  { content: ' that', type: 'TEXT', properties: null },
+  { content: ' it', type: 'TEXT', properties: null },
+  { content: ' will', type: 'TEXT', properties: null },
+  { content: ' be', type: 'TEXT', properties: null },
+  { content: ' a', type: 'TEXT', properties: null },
+  { content: ' success', type: 'TEXT', properties: null },
+  { content: '.', type: 'TEXT', properties: null },
+  { content: '', type: 'TEXT', properties: null }
 ];

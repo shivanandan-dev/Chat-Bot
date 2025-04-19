@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   margin: 0;
   padding: 0;
@@ -10,13 +9,12 @@
 }
 
 @layer utilities {
-  
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
 
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
