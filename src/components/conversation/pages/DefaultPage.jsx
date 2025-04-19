@@ -1,11 +1,16 @@
 import { Send } from 'lucide-react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
+
+import { useConversation } from '../../../context/ConversationContext';
 import PromptExamples from '../components/PromptExamples';
 
 export default function DefaultPage() {
     const [newMessage, setNewMessage] = useState("");
+    const [submitting, setSubmitting] = useState(false);
     const navigate = useNavigate();
+    const { getConversations } = useConversation();
+
     const promptExamples = {
         0: {
             id: "Examples",
@@ -41,6 +46,8 @@ export default function DefaultPage() {
 
         if (!newMessage) return;
 
+        setSubmitting(true);
+
         try {
             const conversationResponse = await fetch("http://localhost:4000/v1/create-conversation", {
                 headers: {
@@ -55,6 +62,7 @@ export default function DefaultPage() {
 
             if (!conversationData.success) {
                 console.error("Failed to create conversation");
+                setSubmitting(false);
                 return;
             }
 
@@ -74,12 +82,18 @@ export default function DefaultPage() {
 
             if (!messageResponse.ok) {
                 console.error("Failed to create message");
+                setSubmitting(false);
                 return;
             }
 
+            await getConversations();
+
+            setNewMessage("");
             navigate(conversationId);
         } catch (error) {
             console.error("An error occurred:", error);
+        } finally {
+            setSubmitting(false);
         }
     }
 
@@ -95,8 +109,15 @@ export default function DefaultPage() {
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
                     placeholder="Type your message..."
+                    disabled={submitting}
                 />
-                <button disabled={!newMessage.trim()} className={`${!newMessage.trim() ? 'text-stone-700' : 'text-stone-200'}`} type="submit"><Send size={20} /></button>
+                <button
+                    disabled={!newMessage.trim() || submitting}
+                    className={`${!newMessage.trim() || submitting ? 'text-stone-700' : 'text-stone-200'}`}
+                    type="submit"
+                >
+                    <Send size={20} />
+                </button>
             </form>
         </div>
     );
