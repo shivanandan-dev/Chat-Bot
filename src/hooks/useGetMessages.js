@@ -1,24 +1,28 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function useGetConversation(conversationId) {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        (async function() {
-            try {
-                setLoading(true);
-                const response = await fetch(`http://localhost:4000/v1/messages/${conversationId}`);
-                const data = await response.json();
-                setData(data.messages || []);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setLoading(false);
-            }
-        })();
+    const fetchConversation = useCallback(async () => {
+        try {
+            setLoading(true);
+            setError(null)
+            const response = await fetch(`http://localhost:4000/v1/messages/${conversationId}`);
+            const data = await response.json();
+            setData(data.messages || []);
+            setError(null);
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
     }, [conversationId]);
 
-    return { data, error, loading, setMessages: setData };
+    useEffect(() => {
+        fetchConversation();
+    }, [fetchConversation]);
+
+    return { data, error, loading, setMessages: setData, refetch: fetchConversation };
 }

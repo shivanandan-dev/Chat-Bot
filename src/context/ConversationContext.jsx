@@ -8,7 +8,7 @@ const ConversationContext = createContext()
 export function ConversationsProvider({ children }) {
     const { updateConversation, isUpdating, error: updateError } = useUpdateConversation()
     const { deleteConversation, isDeleting, error: deleteError } = useDeleteConversation()
-    const { conversations, getConversations, isGettingConversation, error: isGettingConversationsError } = useGetConversations()
+    const { conversations, getConversations, isGettingConversation, error: isGettingConversationsError, refetch } = useGetConversations()
 
     const loading = isDeleting || isUpdating || isGettingConversation
     const error = deleteError || updateError || isGettingConversationsError
@@ -35,6 +35,7 @@ export function ConversationsProvider({ children }) {
         deleteConversation: deleteConversationMutation,
         getConversations,
         loading,
+        refetch,
         error
     }
 
